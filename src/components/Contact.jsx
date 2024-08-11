@@ -1,8 +1,9 @@
 import { Box, Button, Heading, Image, Text, useMediaQuery } from '@chakra-ui/react'
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import GmailForm from './GmailForm';
 import ThemeContext from '../context/ThemeContext';
 import colors from '../utils/utils';
+import Aos from 'aos';
 
 const Contact = () => {
 
@@ -44,6 +45,27 @@ const Contact = () => {
           console.error('Failed to copy text: ', err);
         });
     }
+
+    useEffect(() => {
+      Aos.init({ duration: 1000 }); // Initialize AOS with a duration of 1000ms
+    }, []);
+
+    // -----------------Resume Download & open in new tab---------------------
+  const downloadResume = () => {
+    // Open in a new tab
+    window.open('/resume.pdf', '_blank');
+    // Trigger download
+    setTimeout(() => {
+      const link = document.createElement('a');
+      link.href = '/resume.pdf';
+      link.download = 'resume.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }, 500); // Adjust the timeout as necessary
+  };
+  // ---------------------------------------------------------
+
     const {isDark}= useContext(ThemeContext)
 
       const [isLargerThan1100] = useMediaQuery("(min-width: 1100px)")
@@ -61,16 +83,16 @@ const Contact = () => {
             <Box w={isLargerThan600?'35rem': '94%'} h={'21rem'} display={'flex'} flexDirection={'column'} justifyContent={'space-evenly'}>
                
                 <Box h={'15rem'} w={'45%'} display={'flex'} flexDirection={'column'} justifyContent={'space-between'}>
-                <Button bg={isDark?colors.dark.primary: '#929292'} color={isDark?'white':'#282828'} transition={'0.4s'} _hover={{bg: '#F87C58'}} onClick={() => window.open('https://www.linkedin.com/in/yash-gupta-196758281/', '_blank')}>Linkdin</Button>
-                <Button  bg={isDark?colors.dark.primary: '#929292'} color={isDark?'white':'#282828'} transition={'0.4s'} _hover={{bg: '#F87C58'}}  onClick={()=> setShowGmailForm(!showGmailForm)}>Mail</Button>
-                <Button  bg={isDark?colors.dark.primary: '#929292'} color={isDark?'white':'#282828'} transition={'0.4s'} _hover={{bg: '#F87C58'}}  onClick={()=> window.open('https://github.com/yashgupta31', '_blank')}>Github</Button>
-                <Button  bg={isDark?colors.dark.primary: '#929292'} color={isDark?'white':'#282828'} transition={'0.4s'} _hover={{bg: '#F87C58'}}  onClick={handleWhatsapp}>Whatsapp</Button>
-                <Button as={'a'} href='/resume.pdf' download={'/resume.pdf'}  bg={isDark?colors.dark.primary: '#929292'} color={isDark?'white':'#282828'} transition={'0.4s'} _hover={{bg: '#F87C58'}} >Resume</Button>
+                <Button data-aos='fade-right'  bg={isDark?colors.dark.primary: '#929292'} color={isDark?'white':'#282828'} transition={'0.4s'} _hover={{bg: '#F87C58'}} onClick={() => window.open('https://www.linkedin.com/in/yash-gupta-196758281/', '_blank')}>Linkdin</Button>
+                <Button data-aos='fade-right'  bg={isDark?colors.dark.primary: '#929292'} color={isDark?'white':'#282828'} transition={'0.4s'} _hover={{bg: '#F87C58'}}  onClick={()=> setShowGmailForm(true)}>Mail</Button>
+                <Button data-aos='fade-right'  bg={isDark?colors.dark.primary: '#929292'} color={isDark?'white':'#282828'} transition={'0.4s'} _hover={{bg: '#F87C58'}}  onClick={()=> window.open('https://github.com/yashgupta31', '_blank')}>Github</Button>
+                <Button data-aos='fade-right'  bg={isDark?colors.dark.primary: '#929292'} color={isDark?'white':'#282828'} transition={'0.4s'} _hover={{bg: '#F87C58'}}  onClick={handleWhatsapp}>Whatsapp</Button>
+                <Button data-aos='fade-right'  as={'a'} onClick={downloadResume} bg={isDark?colors.dark.primary: '#929292'} color={isDark?'white':'#282828'} transition={'0.4s'} _hover={{bg: '#F87C58'}} >Resume</Button>
                 </Box>
 
 
                 <Box display={'flex'} flexDirection={isLargerThan600?'row': 'column'} w={isLargerThan600?'36rem': '100%'} h={!isLargerThan600 && '7rem'} mt={'1rem'} justifyContent={'space-between'}>
-                <Box color={'white'} border={'1px solid #F87C58'} borderRadius={'8px'} display={'flex'} justifyContent={'space-between'} alignItems={'center'}>
+                <Box  color={'white'} border={'1px solid #F87C58'} borderRadius={'8px'} display={'flex'} justifyContent={'space-between'} alignItems={'center'}>
                     <Text color={isDark? 'white': '#434242'} ml={isLargerThan600? '1rem': '0.2rem'} mr={isLargerThan600? '1rem': '0.2rem'} fontSize={!isLargerThan600 && 'sm'}>9527267375 </Text>
                     <Button bg={'#F87C58'} onClick={handleCopyNumber}>{isNumCopy? 'Copied': 'Copy'}</Button>
                 </Box>

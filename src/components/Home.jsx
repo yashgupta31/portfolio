@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 import dp from '../assets/dp4.png'
-import { Box, Heading, Text, Button, useMediaQuery, keyframes, space, Image, Link } from '@chakra-ui/react';
+import { Box, Heading, Text, Button, useMediaQuery, keyframes, space, Image, Link, Icon } from '@chakra-ui/react';
 
 import { CiLinkedin } from "react-icons/ci";
 import { FaArrowDown, FaGithub } from 'react-icons/fa';
@@ -8,28 +8,13 @@ import { CgMail } from 'react-icons/cg';
 import { Typewriter } from 'react-simple-typewriter';
 import ThemeContext from '../context/ThemeContext';
 import colors from '../utils/utils'
-// const moveAnimation = keyframes`
-//   0%, 100% { transform: translateX(0); }
-//   50% { transform: translateX(100%); }
-// `;
+import Aos from 'aos';
+import { HashLink } from 'react-router-hash-link';
+import GmailForm from './GmailForm';
 
-// const moveAnimation = keyframes`
-//   0%, 100% { transform: translateX(0); }
-//   50% { transform: translateX(calc(100% - 2rem)); }
-// `;
-
-// const moveAnimation = keyframes`
-//   0% { transform: translateX(0); }
-//   50% { transform: translateX(calc(100% - 2rem)); }
-//   100% { transform: translateX(0); }
-// `;
-
-const moveAnimation = keyframes`
-  0%, 100% { justify-content: start; }
-  50% { justify-content: end; }
-`;
 
 const Home = () => {
+  const [showGmailForm, setShowGmailForm]= useState(false)
   const [flag1, setFlag1] = useState(false)
   const [flag2, setFlag2] = useState(false)
   const [flag3, setFlag3] = useState(false)
@@ -140,22 +125,72 @@ document.body.removeChild(link);
     "CONTINUOUS LEARNER..",
     "CREATIVE PROGRAMMER"
   ];
+  // ---------------------------copy-----------------------
+//   const [number, setNumber]= useState('9527267375')
+//     const [mail, setMail]= useState('yashsantoshgupta2019@gmail.com')
+//     const [isNumCopy, setIsNumCopy]= useState(false)
+//     const [isMailCopy, setIsMailCopy]= useState(false)
+//     const [showGmailForm, setShowGmailForm]= useState(false)
+
+//   const handleCopyNumber=()=>{
+//     navigator.clipboard.writeText(number)
+//     .then(() => {
+//       setIsNumCopy(true)
+//       setTimeout(()=>{
+//         setIsNumCopy(false)
+//       }, [1000])
+//     })
+//     .catch((err) => {
+//       console.error('Failed to copy text: ', err);
+//     });
+// }
+
+// const handleCopyMail=()=>{
+//     navigator.clipboard.writeText(mail)
+//     .then(() => {
+//       setIsMailCopy(true)
+//       setTimeout(()=>{
+//         setIsMailCopy(false)
+//       }, [1000])
+//     })
+//     .catch((err) => {
+//       console.error('Failed to copy text: ', err);
+//     });
+// }
+
   // -----------theme--------------
   const {isDark}= useContext(ThemeContext)
+
+  // -----------------Resume Download & open in new tab---------------------
+  const downloadResume = () => {
+    // Open in a new tab
+    window.open('/resume.pdf', '_blank');
+    // Trigger download
+    setTimeout(() => {
+      const link = document.createElement('a');
+      link.href = '/resume.pdf';
+      link.download = 'resume.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }, 500); // Adjust the timeout as necessary
+  };
+  // ---------------------------------------------------------
 
   const [isLargerThan1200] = useMediaQuery("(min-width: 1200px)")
   const [isLargerThan1000] = useMediaQuery("(min-width: 1000px)")
   const [isLargerThan700] = useMediaQuery("(min-width: 700px)")
   const [isLargerThan500] = useMediaQuery("(min-width: 500px)")
+  const [isLargerThan600] = useMediaQuery("(min-width: 600px)")
   const [isLargerThan450] = useMediaQuery("(min-width: 450px)")
   const [isLargerThan360] = useMediaQuery("(min-width: 360px)")
 
   return (
     <Box h={'100vh'} pt={isLargerThan700?'0rem':'9rem'} bg={isDark? colors.dark.primary: colors.light.primary} display={'flex'} flexDirection={isLargerThan1000 ? 'row' : 'column'} justifyContent={'center'} alignItems={'center'} position={'relative'}>
       <Box position={'absolute'} color={isDark?'white': colors.dark.primary} left={isLargerThan700 && '4rem'} right={!isLargerThan700 && '3rem'} bottom={isLargerThan700?'3rem': '5rem'} display={'flex'} flexDirection={'column'} h={isLargerThan700?'7rem': '5.5rem'} justifyContent={'space-between'} alignItems={'center'} fontSize={isLargerThan700?'1.9rem': '1.3rem'} opacity={flag3 ? '100%' : '0%'} transition={'0.7s'}>
-        <CiLinkedin style={{ transform: flag3 ? 'none' : 'Rotate(-135deg)', transition: '0.7s' }} />
-        <FaGithub style={{ transform: flag3 ? 'none' : 'Rotate(135deg)', transition: '0.7s' }} />
-        <CgMail style={{ transform: flag3 ? 'none' : 'Rotate(135deg)', transition: '0.7s' }} />
+        <Text as={'a'} href='https://www.linkedin.com/in/yashgupta2001/' target='_blank'><Icon as={CiLinkedin}  style={{ transform: flag3 ? 'none' : 'Rotate(-135deg)', transition: '0.7s' }} /></Text>
+        <Text as={'a'} href='https://github.com/yashgupta31' target='_blank'><Icon as={FaGithub} style={{ transform: flag3 ? 'none' : 'Rotate(135deg)', transition: '0.7s' }} /></Text>
+        <Text as={'a'} cursor={'pointer'}><Icon as={CgMail} onClick={()=> setShowGmailForm(true)} style={{ transform: flag3 ? 'none' : 'Rotate(135deg)', transition: '0.7s' }} /></Text>
 
       </Box>
       {
@@ -176,10 +211,11 @@ document.body.removeChild(link);
           {/* <Button w={'12rem'} shadow={'lg'} position={'relative'} opacity={flag4 ? '100%' : '0%'} left={flag4 ? '0rem' : '-5rem'} transition={'0.7s'} colorScheme='red' size='md' bg={'#F87C58'}>
             Resume
           </Button> */}
-          <Link
-  href="/resume.pdf"
-  download="resume.pdf"
-  target="_blank"
+          {/* <Button onClick={downloadResume}  w={'6rem'} shadow={'lg'} position={'relative'}  transition={'0.7s'} colorScheme='red' size='md' bg={'#F87C58'}>
+                Resume
+              </Button> */}
+          <Button
+  onClick={downloadResume}
   rel="noopener noreferrer"
   w="12rem"
   shadow="lg"
@@ -194,9 +230,22 @@ document.body.removeChild(link);
   textDecoration="none"
   borderRadius="4px"
   display="inline-block"
+  _hover={{backgroundColor: 'tomato'}}
 >
-  -Resume-
-</Link>
+  Resume
+</Button>
+
+{/* <Box display={'flex'} flexDirection={isLargerThan600?'row': 'column'} w={isLargerThan600?'36rem': '100%'} h={!isLargerThan600 && '7rem'} mt={'1rem'} justifyContent={'space-between'}>
+                <Box  color={'white'} border={'1px solid #F87C58'} borderRadius={'8px'} display={'flex'} justifyContent={'space-between'} alignItems={'center'}>
+                    <Text color={isDark? 'white': '#434242'} ml={isLargerThan600? '1rem': '0.2rem'} mr={isLargerThan600? '1rem': '0.2rem'} fontSize={!isLargerThan600 && 'sm'}>9527267375 </Text>
+                    <Button bg={'#F87C58'} onClick={handleCopyNumber}>{isNumCopy? 'Copied': 'Copy'}</Button>
+                </Box>
+
+                <Box color={'white'} fontSize={!isLargerThan600 && 'sm'} border={'1px solid #F87C58'} borderRadius={'8px'} display={'flex'} justifyContent={'space-between'} alignItems={'center'}>
+                    <Text color={isDark? 'white': '#434242'} ml={isLargerThan600? '1rem': '0.2rem'} mr={isLargerThan600? '1rem': '0.2rem'} fontSize={!isLargerThan600 && 'sm'} >yashsantoshgupta2019@gmail.com</Text>
+                    <Button bg={'#F87C58'} onClick={handleCopyMail} _active={{ bg: "#F87C58" }}>{isMailCopy? 'Copied': 'Copy'}</Button>
+                </Box>
+                </Box> */}
 
         </Box>
       
@@ -239,8 +288,12 @@ document.body.removeChild(link);
 
       {
         isLargerThan700 && <FaArrowDown style={{ position: 'absolute', color: isDark? 'white': colors.dark.primary, right: '8rem', bottom: flag5 ? '5rem' : '3rem', transition: '1s', fontSize: '1.6rem' }} />
-
       }
+
+      {/* --------gmail----------- */}
+      {
+                showGmailForm && (<GmailForm setShowGmailForm={setShowGmailForm} />)
+            }
 
     </Box>
   )

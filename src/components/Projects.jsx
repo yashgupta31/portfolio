@@ -27,6 +27,7 @@ import quiz1 from '../assets/Projects/quiz1.png'
 import quiz2 from '../assets/Projects/quiz2.png'
 import quiz3 from '../assets/Projects/quiz3.png'
 import quiz4 from '../assets/Projects/quiz4.png'
+import Aos from 'aos'
 
 
 
@@ -82,6 +83,10 @@ const Projects = () => {
         return () => clearInterval(interval);
     }, []);
 
+    useEffect(() => {
+        Aos.init({ duration: 1000 }); // Initialize AOS with a duration of 1000ms
+      }, [isDark]);
+
     const [isLargerThan500] = useMediaQuery("(min-width: 500px)")
     const [isLargerThan400] = useMediaQuery("(min-width: 400px)")
 
@@ -97,7 +102,7 @@ const Projects = () => {
                 {/* each project----------------- */}
                 {
                     data.map((elem, index) => (
-                        <Box key={index} bg={isDark? '#181818': '#B6B6B6'} transition={'0.5s'} color={isDark?'white': '#282828'} w={'26rem'} h={isLargerThan400?'35rem':'auto'} m={'1rem'} pb={'1rem'} borderRadius={'14px'} boxShadow={isDark?'rgba(0, 0, 0, 0.35) 0px 5px 15px':'rgba(0, 0, 0, 0.35) 0px 2px 10px'}>
+                        <Box key={index} data-aos="fade-up" bg={isDark? '#181818': '#B6B6B6'} transition={'0.5s'} color={isDark?'white': '#282828'} w={'26rem'} h={isLargerThan400?'35rem':'auto'} m={'1rem'} pb={'1rem'} borderRadius={'14px'} boxShadow={isDark?'rgba(0, 0, 0, 0.35) 0px 5px 15px':'rgba(0, 0, 0, 0.35) 0px 2px 10px'}>
                             <Box bg={'black'} h={isLargerThan400?'13rem': '9rem'} w={'100%'} overflow={'hidden'} borderRadius={'14px 14px 0px 0px'} >
                                 <Image src={elem.img[count]}  h={'100%'}  />
                             </Box>
