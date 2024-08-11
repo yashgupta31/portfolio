@@ -195,7 +195,7 @@ document.body.removeChild(link);
   borderRadius="4px"
   display="inline-block"
 >
-  Resume
+  -Resume-
 </Link>
 
         </Box>
