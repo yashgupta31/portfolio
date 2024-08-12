@@ -39,7 +39,7 @@ const GmailForm = ({setShowGmailForm}) => {
     // onClick={()=> setShowGmailForm(false)}
     <Box bg={'rgba(0, 0, 0, 0.7)'}  position={'fixed'} top={'0rem'} w={'100%'} h={'100%'} zIndex={999} display={'flex'} justifyContent={'center'} alignItems={'end'}>
        <Box as='form' onSubmit={handleSubmit} bg={isDark?colors.dark.primary: colors.light.primary} color={isDark?'white':'#282828'} w={isLargerThan400?'20rem': '17rem'} h={'27rem'} borderRadius={'md'} p={'1rem'} display={'flex'} flexDirection={'column'} justifyContent={'space-evenly'} position={'fixed'} bottom={'1rem'} transition={'0.6s'}>
-      <Text textAlign={'center'} fontSize={'1.2rem'} fontWeight={600} pb={'1rem'}>Send Gmail</Text>
+      <Text textAlign={'center'} fontSize={'1.2rem'} fontWeight={600} pb={'1rem'}>Send Mail</Text>
       <Box>
         Name:
         <Input type="text" name="name" placeholder='Enter your name' value={form.name} onChange={handleChange} required />
