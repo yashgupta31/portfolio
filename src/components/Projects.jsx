@@ -4,6 +4,12 @@ import React, { useContext, useEffect, useState } from 'react'
 import ThemeContext from '../context/ThemeContext'
 import colors from '../utils/utils'
 // import { Button } from 'react-scroll'
+//Docmate
+import docmate1 from '../assets/Projects/docmate1.png'
+import docmate2 from '../assets/Projects/docmate2.png'
+import docmate3 from '../assets/Projects/docmate3.png'
+import docmate4 from '../assets/Projects/docmate4.png'
+import docmate5 from '../assets/Projects/docmate5.png'
 //Asos
 import asos1 from '../assets/Projects/asos1.png'
 import asos2 from '../assets/Projects/asos2.png'
@@ -36,6 +42,14 @@ const Projects = () => {
 
 
     const data = [
+        {
+            img: [docmate1,docmate2, docmate3, docmate4, docmate5],
+            name: 'Docmate',
+            description: `Docmate is a platform for scheduling medical appointments with features for patients to book slots, view doctors, and track appointment status, while admins manage appointments, doctor availability, and add new doctors.`,
+            teck: 'React | Redux | MongoDB| Express | Javascript | Html | Css | NodeJs | Material Ui',
+            live: `https://docmate-patient-frontend.vercel.app/`,
+            github: `https://github.com/yashgupta31/PatientFrontend`
+        },
         {
             img: [asos1,asos2, asos3, asos4, asos5],
             name: 'Asos',

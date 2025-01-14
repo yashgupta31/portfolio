@@ -21,10 +21,7 @@ import python from '../assets/skill-icons/python.webp'
 import postman from '../assets/skill-icons/postman.png'
 import vercel from '../assets/skill-icons/vercel.png'
 import git from '../assets/skill-icons/git.png'
-
-
-
-
+import materialUI from '../assets/skill-icons/material-ui.png'
 
 const Skills = () => {
     const { isDark, setIsDark } = useContext(ThemeContext)
@@ -77,13 +74,14 @@ const Skills = () => {
                         Redux
                     </Box>
                 </Box>
-                {/* chakra ui */}
+                {/* mongodb */}
                 <Box bg={'white'} data-aos="fade-up" className='skill-container' w={'6.5rem'} h={'7.5rem'} position={'relative'}  display={'flex'} alignItems={'center'} justifyContent={'center'} borderRadius={'8px'} transition={'0.5s'} _hover={{ boxShadow: 'black 0px 3px 8px;', cursor: 'pointer', bg: '#F87C58' }}>
-                    <img src={chakraUI} width={'80%'} />
+                    <img src={mongodb} width={'80%'} />
                     <Box className='skill-name' position={'absolute'} borderRadius={'8px'}>
-                        ChakraUI
+                        MongoDB
                     </Box>
                 </Box>
+                
                 {/* nodejs */}
                 <Box bg={'white'} data-aos="fade-up" className='skill-container' w={'6.5rem'} h={'7.5rem'} position={'relative'}  display={'flex'} alignItems={'center'} justifyContent={'center'} borderRadius={'8px'} transition={'0.5s'} _hover={{ boxShadow: 'black 0px 3px 8px;', cursor: 'pointer', bg: '#F87C58' }}>
                     <img src={nodejs} width={'80%'} />
@@ -105,11 +103,19 @@ const Skills = () => {
                         Mongoose
                     </Box>
                 </Box>
-                {/* mongodb */}
+                {/* chakra ui */}
                 <Box bg={'white'} data-aos="fade-up" className='skill-container' w={'6.5rem'} h={'7.5rem'} position={'relative'}  display={'flex'} alignItems={'center'} justifyContent={'center'} borderRadius={'8px'} transition={'0.5s'} _hover={{ boxShadow: 'black 0px 3px 8px;', cursor: 'pointer', bg: '#F87C58' }}>
-                    <img src={mongodb} width={'80%'} />
+                    <img src={chakraUI} width={'80%'} />
                     <Box className='skill-name' position={'absolute'} borderRadius={'8px'}>
-                        MongoDB
+                        ChakraUI
+                    </Box>
+                </Box>
+
+                {/* react-router */}
+                <Box bg={'white'} data-aos="fade-up" className='skill-container' w={'6.5rem'} h={'7.5rem'} position={'relative'}  display={'flex'} alignItems={'center'} justifyContent={'center'} borderRadius={'8px'} transition={'0.5s'} _hover={{ boxShadow: 'black 0px 3px 8px;', cursor: 'pointer', bg: '#F87C58' }}>
+                    <img src={materialUI} width={'80%'} />
+                    <Box className='skill-name' position={'absolute'} borderRadius={'8px'}>
+                        Material UI
                     </Box>
                 </Box>
 
@@ -119,20 +125,14 @@ const Skills = () => {
                         Vite
                     </Box>
                 </Box>
-                {/* thunder client */}
+                {/* Github */}
                 <Box bg={'white'} data-aos="fade-up" className='skill-container' w={'6.5rem'} h={'7.5rem'} position={'relative'}  display={'flex'} alignItems={'center'} justifyContent={'center'} borderRadius={'8px'} transition={'0.5s'} _hover={{ boxShadow: 'black 0px 3px 8px;', cursor: 'pointer', bg: '#F87C58' }}>
                     <img src={github} width={'80%'} />
                     <Box className='skill-name' position={'absolute'} borderRadius={'8px'}>
                         GitHub
                     </Box>
                 </Box>
-                {/* react-router */}
-                <Box bg={'white'} data-aos="fade-up" className='skill-container' w={'6.5rem'} h={'7.5rem'} position={'relative'}  display={'flex'} alignItems={'center'} justifyContent={'center'} borderRadius={'8px'} transition={'0.5s'} _hover={{ boxShadow: 'black 0px 3px 8px;', cursor: 'pointer', bg: '#F87C58' }}>
-                    <img src={python} width={'80%'} />
-                    <Box className='skill-name' position={'absolute'} borderRadius={'8px'}>
-                        Python
-                    </Box>
-                </Box>
+                
                 {/* github */}
                 <Box bg={'white'} data-aos="fade-up" className='skill-container' w={'6.5rem'} h={'7.5rem'} position={'relative'}  display={'flex'} alignItems={'center'} justifyContent={'center'} borderRadius={'8px'} transition={'0.5s'} _hover={{ boxShadow: 'black 0px 3px 8px;', cursor: 'pointer', bg: '#F87C58' }}>
                     <img src={postman} width={'80%'} />
