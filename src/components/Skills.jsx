@@ -37,21 +37,7 @@ const Skills = () => {
             <Text fontSize={isLargerThan500 ? '2.6rem' : '2.2rem'} color={isDark? 'white': '#434242'} fontWeight={'450'} ><Text as={'span'} color={colors.primary}>Skills</Text> & Tools</Text>
 
             <Box w={isLargerThan500?'77%': '90%'} display={'flex'} flexWrap={'wrap'} justifyContent={'center'} mt={'4rem'} gap={10} >
-                {/* html */}
-                <Box bg={'white'} data-aos="fade-up" className='skill-container' w={'6.5rem'} h={'7.5rem'} position={'relative'} display={'flex'} alignItems={'center'} justifyContent={'center'} borderRadius={'8px'} transition={'0.5s'} _hover={{ boxShadow: 'black 0px 3px 8px;', cursor: 'pointer', bg: '#F87C58' }}>
-                    <img src={html} width={'80%'} />
-                    <Box className='skill-name' position={'absolute'} borderRadius={'8px'}>
-                        Html
-                    </Box>
-                </Box>
-
-                {/* css */}
-                <Box bg={'white'} data-aos="fade-up"  className='skill-container' w={'6.5rem'} h={'7.5rem'} position={'relative'}  display={'flex'} alignItems={'center'} justifyContent={'center'} borderRadius={'8px'} transition={'0.5s'} _hover={{ boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px', cursor: 'pointer', bg: '#F87C58' }}>
-                    <img src={css} width={'80%'} />
-                    <Box className='skill-name' position={'absolute'} borderRadius={'8px'}>
-                        Css
-                    </Box>
-                </Box>
+                
                 {/* </Box> */}
                 {/* javascript */}
                 <Box bg={'white'} data-aos="fade-up" className='skill-container' w={'6.5rem'} h={'7.5rem'}  position={'relative'} display={'flex'} alignItems={'center'} justifyContent={'center'} borderRadius={'8px'} transition={'0.5s'} _hover={{ boxShadow: 'black 0px 3px 8px;', cursor: 'pointer', bg: '#F87C58' }}>
@@ -74,13 +60,6 @@ const Skills = () => {
                         Redux
                     </Box>
                 </Box>
-                {/* mongodb */}
-                <Box bg={'white'} data-aos="fade-up" className='skill-container' w={'6.5rem'} h={'7.5rem'} position={'relative'}  display={'flex'} alignItems={'center'} justifyContent={'center'} borderRadius={'8px'} transition={'0.5s'} _hover={{ boxShadow: 'black 0px 3px 8px;', cursor: 'pointer', bg: '#F87C58' }}>
-                    <img src={mongodb} width={'80%'} />
-                    <Box className='skill-name' position={'absolute'} borderRadius={'8px'}>
-                        MongoDB
-                    </Box>
-                </Box>
                 
                 {/* nodejs */}
                 <Box bg={'white'} data-aos="fade-up" className='skill-container' w={'6.5rem'} h={'7.5rem'} position={'relative'}  display={'flex'} alignItems={'center'} justifyContent={'center'} borderRadius={'8px'} transition={'0.5s'} _hover={{ boxShadow: 'black 0px 3px 8px;', cursor: 'pointer', bg: '#F87C58' }}>
@@ -96,13 +75,32 @@ const Skills = () => {
                         Express
                     </Box>
                 </Box>
-                {/* mongoose */}
-                <Box bg={'white'} data-aos="fade-up" className='skill-container' w={'6.5rem'} h={'7.5rem'} position={'relative'}  display={'flex'} alignItems={'center'} justifyContent={'center'} borderRadius={'8px'} transition={'0.5s'} _hover={{ boxShadow: 'black 0px 3px 8px;', cursor: 'pointer', bg: '#F87C58' }}>
-                    <img src={mongoose} width={'80%'} />
+
+                 {/* mongodb */}
+                 <Box bg={'white'} data-aos="fade-up" className='skill-container' w={'6.5rem'} h={'7.5rem'} position={'relative'}  display={'flex'} alignItems={'center'} justifyContent={'center'} borderRadius={'8px'} transition={'0.5s'} _hover={{ boxShadow: 'black 0px 3px 8px;', cursor: 'pointer', bg: '#F87C58' }}>
+                    <img src={mongodb} width={'80%'} />
                     <Box className='skill-name' position={'absolute'} borderRadius={'8px'}>
-                        Mongoose
+                        MongoDB
                     </Box>
                 </Box>
+
+                 {/* html */}
+                 <Box bg={'white'} data-aos="fade-up" className='skill-container' w={'6.5rem'} h={'7.5rem'} position={'relative'} display={'flex'} alignItems={'center'} justifyContent={'center'} borderRadius={'8px'} transition={'0.5s'} _hover={{ boxShadow: 'black 0px 3px 8px;', cursor: 'pointer', bg: '#F87C58' }}>
+                    <img src={html} width={'80%'} />
+                    <Box className='skill-name' position={'absolute'} borderRadius={'8px'}>
+                        Html
+                    </Box>
+                </Box>
+
+                {/* css */}
+                <Box bg={'white'} data-aos="fade-up"  className='skill-container' w={'6.5rem'} h={'7.5rem'} position={'relative'}  display={'flex'} alignItems={'center'} justifyContent={'center'} borderRadius={'8px'} transition={'0.5s'} _hover={{ boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px', cursor: 'pointer', bg: '#F87C58' }}>
+                    <img src={css} width={'80%'} />
+                    <Box className='skill-name' position={'absolute'} borderRadius={'8px'}>
+                        Css
+                    </Box>
+                </Box>
+
+               
                 {/* chakra ui */}
                 <Box bg={'white'} data-aos="fade-up" className='skill-container' w={'6.5rem'} h={'7.5rem'} position={'relative'}  display={'flex'} alignItems={'center'} justifyContent={'center'} borderRadius={'8px'} transition={'0.5s'} _hover={{ boxShadow: 'black 0px 3px 8px;', cursor: 'pointer', bg: '#F87C58' }}>
                     <img src={chakraUI} width={'80%'} />
@@ -116,6 +114,23 @@ const Skills = () => {
                     <img src={materialUI} width={'80%'} />
                     <Box className='skill-name' position={'absolute'} borderRadius={'8px'}>
                         Material UI
+                    </Box>
+                </Box>
+                
+                {/* Jsonwebtoken */}
+                <Box bg={'white'} data-aos="fade-up" className='skill-container' w={'6.5rem'} h={'7.5rem'} position={'relative'}  display={'flex'} alignItems={'center'} justifyContent={'center'} borderRadius={'8px'} transition={'0.5s'} _hover={{ boxShadow: 'black 0px 3px 8px;', cursor: 'pointer', bg: '#F87C58' }}>
+                    <img src={'https://werkraum.net/fileadmin/news_import/jwt_pic_logo.svg.png'} width={'80%'} />
+                    <Box className='skill-name' p={'1rem'} position={'absolute'} borderRadius={'8px'}>
+                        Jwt
+                    </Box>
+                </Box>
+
+               
+                 {/* mongoose */}
+                 <Box bg={'white'} data-aos="fade-up" className='skill-container' w={'6.5rem'} h={'7.5rem'} position={'relative'}  display={'flex'} alignItems={'center'} justifyContent={'center'} borderRadius={'8px'} transition={'0.5s'} _hover={{ boxShadow: 'black 0px 3px 8px;', cursor: 'pointer', bg: '#F87C58' }}>
+                    <img src={mongoose} width={'80%'} />
+                    <Box className='skill-name' position={'absolute'} borderRadius={'8px'}>
+                        Mongoose
                     </Box>
                 </Box>
 
@@ -148,12 +163,7 @@ const Skills = () => {
                     </Box>
                 </Box>
 
-                <Box bg={'white'} data-aos="fade-up" className='skill-container' w={'6.5rem'} h={'7.5rem'} position={'relative'}  display={'flex'} alignItems={'center'} justifyContent={'center'} borderRadius={'8px'} transition={'0.5s'} _hover={{ boxShadow: 'black 0px 3px 8px;', cursor: 'pointer', bg: '#F87C58' }}>
-                    <img src={git} width={'80%'} />
-                    <Box className='skill-name' position={'absolute'} borderRadius={'8px'}>
-                        Git
-                    </Box>
-                </Box>
+                
 
             </Box>
         </Box>
