@@ -1,8 +1,15 @@
 import { createContext, useEffect, useReducer, useState } from "react";
 
 const getInitialTheme = () => {
-    const savedTheme = localStorage.getItem("theme");
-    return savedTheme ? JSON.parse(savedTheme) : true; // Default to true for dark mode
+    try {
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === null) return true; // Default to true for dark mode
+      return JSON.parse(savedTheme);
+    } catch {
+      // Clear invalid value from localStorage
+      localStorage.removeItem("theme");
+      return true; // Default to true for dark mode
+    }
   };
 
 const ThemeContext= createContext();
