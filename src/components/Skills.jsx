@@ -22,6 +22,13 @@ import postman from '../assets/skill-icons/postman.png'
 import vercel from '../assets/skill-icons/vercel.png'
 import git from '../assets/skill-icons/git.png'
 import materialUI from '../assets/skill-icons/material-ui.png'
+import typescript from '../assets/skill-icons/Typescript.webp'
+import redis from '../assets/skill-icons/redis.png'
+import nextjs from '../assets/skill-icons/nextjs.webp'
+import kafka from '../assets/skill-icons/kafka.png'
+import postgresql from '../assets/skill-icons/postgresql.webp'
+import timescaledb from '../assets/skill-icons/timescaledb.webp';
+import docker from '../assets/skill-icons/docker.webp';
 
 const Skills = () => {
     const { isDark, setIsDark } = useContext(ThemeContext)
@@ -46,6 +53,15 @@ const Skills = () => {
                         javascript
                     </Box>
                 </Box>
+
+                {/* typescript */}
+                <Box bg={'white'} data-aos="fade-up" className='skill-container' w={'6.5rem'} h={'7.5rem'}  position={'relative'} display={'flex'} alignItems={'center'} justifyContent={'center'} borderRadius={'8px'} transition={'0.5s'} _hover={{ boxShadow: 'black 0px 3px 8px;', cursor: 'pointer', bg: '#F87C58' }}>
+                    <img src={typescript} width={'80%'} />
+                    <Box className='skill-name' position={'absolute'} borderRadius={'8px'}>
+                        TypeScript
+                    </Box>
+                </Box>
+
                 {/* react */}
                 <Box bg={'white'} data-aos="fade-up" className='skill-container' w={'6.5rem'} h={'7.5rem'} position={'relative'}  display={'flex'} alignItems={'center'} justifyContent={'center'} borderRadius={'8px'} transition={'0.5s'} _hover={{ boxShadow: 'black 0px 3px 8px;', cursor: 'pointer', bg: '#F87C58' }}>
                     <img src={react} width={'80%'} />
@@ -53,6 +69,15 @@ const Skills = () => {
                         React
                     </Box>
                 </Box>
+
+                {/* nextjs */}
+                <Box bg={'white'} data-aos="fade-up" className='skill-container' w={'6.5rem'} h={'7.5rem'} position={'relative'}  display={'flex'} alignItems={'center'} justifyContent={'center'} borderRadius={'8px'} transition={'0.5s'} _hover={{ boxShadow: 'black 0px 3px 8px;', cursor: 'pointer', bg: '#F87C58' }}>
+                    <img src={nextjs} width={'80%'} />
+                    <Box className='skill-name' position={'absolute'} borderRadius={'8px'}>
+                        NextJs
+                    </Box>
+                </Box>
+
                 {/* redux */}
                 <Box bg={'white'} data-aos="fade-up" className='skill-container' w={'6.5rem'} h={'7.5rem'} position={'relative'}  display={'flex'} alignItems={'center'} justifyContent={'center'} borderRadius={'8px'} transition={'0.5s'} _hover={{ boxShadow: 'black 0px 3px 8px;', cursor: 'pointer', bg: '#F87C58' }}>
                     <img src={redux} width={'80%'} />
@@ -76,6 +101,30 @@ const Skills = () => {
                     </Box>
                 </Box>
 
+                {/* redis */}
+                <Box bg={'white'} data-aos="fade-up" className='skill-container' w={'6.5rem'} h={'7.5rem'} position={'relative'}  display={'flex'} alignItems={'center'} justifyContent={'center'} borderRadius={'8px'} transition={'0.5s'} _hover={{ boxShadow: 'black 0px 3px 8px;', cursor: 'pointer', bg: '#F87C58' }}>
+                    <img src={redis} width={'80%'} />
+                    <Box className='skill-name' position={'absolute'} borderRadius={'8px'}>
+                        Redis
+                    </Box>
+                </Box>
+
+                {/* docker */}
+                <Box bg={'white'} data-aos="fade-up" className='skill-container' w={'6.5rem'} h={'7.5rem'} position={'relative'}  display={'flex'} alignItems={'center'} justifyContent={'center'} borderRadius={'8px'} transition={'0.5s'} _hover={{ boxShadow: 'black 0px 3px 8px;', cursor: 'pointer', bg: '#F87C58' }}>
+                    <img src={docker} width={'80%'} />
+                    <Box className='skill-name' position={'absolute'} borderRadius={'8px'}>
+                        Docker
+                    </Box>
+                </Box>
+
+                {/* kafka */}
+                <Box bg={'white'} data-aos="fade-up" className='skill-container' w={'6.5rem'} h={'7.5rem'} position={'relative'}  display={'flex'} alignItems={'center'} justifyContent={'center'} borderRadius={'8px'} transition={'0.5s'} _hover={{ boxShadow: 'black 0px 3px 8px;', cursor: 'pointer', bg: '#F87C58' }}>
+                    <img src={kafka} width={'80%'} />
+                    <Box className='skill-name' position={'absolute'} borderRadius={'8px'}>
+                        Kafka
+                    </Box>
+                </Box>
+
                  {/* mongodb */}
                  <Box bg={'white'} data-aos="fade-up" className='skill-container' w={'6.5rem'} h={'7.5rem'} position={'relative'}  display={'flex'} alignItems={'center'} justifyContent={'center'} borderRadius={'8px'} transition={'0.5s'} _hover={{ boxShadow: 'black 0px 3px 8px;', cursor: 'pointer', bg: '#F87C58' }}>
                     <img src={mongodb} width={'80%'} />
@@ -83,6 +132,24 @@ const Skills = () => {
                         MongoDB
                     </Box>
                 </Box>
+
+                {/* postgresql */}
+                 <Box bg={'white'} data-aos="fade-up" className='skill-container' w={'6.5rem'} h={'7.5rem'} position={'relative'}  display={'flex'} alignItems={'center'} justifyContent={'center'} borderRadius={'8px'} transition={'0.5s'} _hover={{ boxShadow: 'black 0px 3px 8px;', cursor: 'pointer', bg: '#F87C58' }}>
+                    <img src={postgresql} width={'80%'} />
+                    <Box className='skill-name' position={'absolute'} borderRadius={'8px'}>
+                        PostgreSQL
+                    </Box>
+                </Box>
+
+                 {/* timescaledb */}
+                <Box bg={'white'} data-aos="fade-up" className='skill-container' w={'6.5rem'} h={'7.5rem'} position={'relative'}  display={'flex'} alignItems={'center'} justifyContent={'center'} borderRadius={'8px'} transition={'0.5s'} _hover={{ boxShadow: 'black 0px 3px 8px;', cursor: 'pointer', bg: '#F87C58' }}>
+                    <img src={timescaledb} width={'80%'} />
+                    <Box className='skill-name' position={'absolute'} borderRadius={'8px'}>
+                        TimescaleDB
+                    </Box>
+                </Box>
+
+                
 
                  {/* html */}
                  <Box bg={'white'} data-aos="fade-up" className='skill-container' w={'6.5rem'} h={'7.5rem'} position={'relative'} display={'flex'} alignItems={'center'} justifyContent={'center'} borderRadius={'8px'} transition={'0.5s'} _hover={{ boxShadow: 'black 0px 3px 8px;', cursor: 'pointer', bg: '#F87C58' }}>
