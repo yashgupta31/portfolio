@@ -41,7 +41,7 @@ const Skills = () => {
     return (
         <Box minH={'95vh'} bg={isDark?colors.dark.third: colors.light.third} pt={'1.6rem'} pb={'1rem'} display={'flex'} flexDirection={'column'} alignItems={'center'} textAlign={'center'}>
             {/* <Heading color={'white'} pt={'1.4rem'} w={'70%'} mt={'2rem'}>My Technical Skills</Heading> */}
-            <Text fontSize={isLargerThan500 ? '2.6rem' : '2.2rem'} color={isDark? 'white': '#434242'} fontWeight={'450'} ><Text as={'span'} color={colors.primary}>Skills</Text> & Tools</Text>
+            <Text fontSize={isLargerThan500 ? '2.6rem' : '2.2rem'} color={isDark ? colors.dark.text : colors.light.text} fontWeight={'450'} ><Text as={'span'} color={colors.primary}>Skills</Text> & Tools</Text>
 
             <Box w={isLargerThan500?'77%': '90%'} display={'flex'} flexWrap={'wrap'} justifyContent={'center'} mt={'4rem'} gap={10} >
                 

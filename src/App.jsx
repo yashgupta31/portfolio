@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import { AnimatePresence } from 'framer-motion';
 import './App.css';
 // import { Box, Heading, Text, Button, useStatStyles } from '@chakra-ui/react';
 import Home from './components/Home';
@@ -6,32 +7,32 @@ import About from './components/About';
 import Navbar from './components/Navbar';
 import { Route, Router, Routes } from 'react-router-dom';
 import Skills from './components/Skills';
+import Experience from './components/Experience';
+import ProfessionalProjects from './components/ProfessionalProjects';
 import Projects from './components/Projects';
 import Animation from './components/Animation';
 import Contact from './components/Contact';
+import ScrollToTop from './components/ScrollToTop';
+import Loader from './components/Loader';
 
 const App = () => {
- 
+  const [loading, setLoading] = useState(true);
 
-  return (
-    // <div>
-    //   <Navbar />
-    //   {/* <Routes>
-    //     <Route path='/home' element={<Home />} />
-    //     <Route path='/about' element={<About />} />
-    //   </Routes> */}
-    //   <div id='home'>
-    //   <Home />
-    //   </div>
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1800); // Wait for 1.8 seconds
+    return () => clearTimeout(timer);
+  }, []);
+   return (
+    <>
+      <AnimatePresence>
+        {loading && <Loader key="loader" />}
+      </AnimatePresence>
       
-    //   <div id='about'>
-    //   <About />
-    //   </div>
-      
-    // </div>
-
-    <div>
-      <Navbar />
+      {!loading && (
+        <div>
+          <Navbar />
       {/* <Routes>
         <Route path="/" element={
           <div> */}
@@ -44,6 +45,12 @@ const App = () => {
             <div id="skills">
               <Skills />
             </div>
+            <div id="experience">
+              <Experience />
+            </div>
+            <div id="professional-projects">
+              <ProfessionalProjects />
+            </div>
             <div id="projects">
               <Projects />
             </div>
@@ -51,10 +58,10 @@ const App = () => {
               <Contact />
               {/* <Animation /> */}
             </div>
+            <ScrollToTop />
           </div>
-    //     } />
-    //   </Routes>
-    // </div>
+      )}
+    </>
   )
 }
 

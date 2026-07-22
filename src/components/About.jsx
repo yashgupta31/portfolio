@@ -25,23 +25,23 @@ useEffect(() => {
       All About Me
       </Heading> */}
 
-                  <Text fontSize={isLargerThan500? '2.6rem': '2.2rem'} color={isDark? 'white': '#434242'} fontWeight={'450'} >All <Text as={'span'} color={colors.primary}>About</Text> Me</Text>
+                  <Text fontSize={isLargerThan500? '2.6rem': '2.2rem'} color={isDark ? colors.dark.text : colors.light.text} fontWeight={'450'} >All <Text as={'span'} color={colors.primary}>About</Text> Me</Text>
 
 
       <Box display={'flex'} flexDirection={isLargerThan1200 ?'row': 'column'} w={isLargerThan1200? '75%': '90%'} justifyContent={'space-between'} mt={'3rem'} alignItems={'center'}>
         <Image  src={'https://static.vecteezy.com/system/resources/previews/011/006/184/original/boy-standing-holding-laptop-with-left-hand-giving-thumbs-up-3d-render-character-illustration-free-png.png'} w={isLargerThan1200?'28rem': '20rem'} position={'relative'} />
 
-        <Box  fontSize={isLargerThan1200? 'xl': isLargerThan500?'lg':'1rem'} color={isDark?'white': colors.dark.primary} w={isLargerThan1200? '47rem': '100%'}  display={'flex'} flexDirection={'column'} justifyContent={'space-between'}>
+        <Box  fontSize={isLargerThan1200? 'xl': isLargerThan500?'lg':'1rem'} color={isDark ? colors.dark.subText : colors.light.subText} w={isLargerThan1200? '47rem': '100%'}  display={'flex'} flexDirection={'column'} justifyContent={'space-between'}>
           <Text mb={'1rem'} data-aos="fade-right">
-          Hello! My name is Yash Gupta, and I am a web developer who loves coding and creating eye-pleasing websites. I am highly adaptable, enjoy tackling challenges, and am always eager to learn new technologies.
+          I'm Yash Gupta, a MERN Stack Developer with over 1 year of professional experience in designing and developing scalable web applications. I specialize in building responsive user interfaces, developing RESTful APIs, and creating efficient full-stack solutions using React.js, Node.js, Express.js, MongoDB, PostgreSQL, and TimescaleDB.
           </Text>
 
           <Text  mb={'1rem'} data-aos="fade-right">
-          I am proficient in JavaScript and experienced in the MERN stack (MongoDB, Express.js, React.js, Node.js). My skills include designing RESTful APIs, working with HTML and CSS, and managing MongoDB databases. I focus on writing efficient, maintainable code.
+          Currently, I'm contributing to the development of an IoT-based Fleet Management System, where I work on real-time GPS tracking, vehicle monitoring, and operational dashboards. I have also contributed to enterprise applications in the logistics domain, including Transport Management, E-Lock Management, and Sharanga AI, with a strong focus on performance optimization, clean architecture, and user experience.
           </Text>
 
           <Text  mb={'1rem'} data-aos="fade-right">
-          I thrive in collaborative environments and enjoy working with others to achieve common goals. As a team player with positive vibes and good communication skills, I bring problem-solving abilities and a commitment to high-quality solutions to every project.
+          I enjoy solving complex technical challenges, optimizing application performance, and building scalable software that delivers real business value. I'm passionate about continuously learning new technologies and expanding my expertise in modern backend systems, cloud technologies, and distributed architectures.
           </Text>
         </Box>
         

@@ -76,18 +76,20 @@ const Navbar = () => {
       {
         isLargerThan700 ? (<Box bg={isDark ? colors.dark.primary : colors.light.secondary} w={'100%'} position={'fixed'} color={'white'} zIndex={99} display={'flex'} flexDirection={'column'} alignItems={'center'} >
           <Box h={'3.9rem'} display={'flex'} justifyContent={'space-between'} alignItems={'center'} w={'100%'} padding={'0rem 2rem'} >
-            <Text fontSize={isLargerThan800 ? '1.9rem' : '1.8rem'}>
-              <HashLink to="/#home" smooth onClick={() => setActive('home')} style={{ display: 'flex', alignItems: 'center' }}>
+            <Text fontSize={isLargerThan800 ? '1.5rem' : '1.4rem'}>
+              <HashLink to="/#home" smooth onClick={() => setActive('home')} style={{ display: 'flex', alignItems: 'center', color: isDark ? 'white' : '#282828' }}>
                 Yash<span style={{ color: 'grey' }}>Gupta</span>
                 <Icon as={SiLintcode} color={'red'} />
 
               </HashLink>
             </Text>
 
-            <Box w={isLargerThan800 ? '34rem' : '27rem'} display={'flex'} alignItems={'center'} justifyContent={'space-evenly'} fontSize={'1.2rem'}>
+            <Box w={isLargerThan800 ? '52rem' : '42rem'} display={'flex'} alignItems={'center'} justifyContent={'space-evenly'} fontSize={'1.05rem'}>
               <HashLink to="/#home" smooth onClick={() => setActive('home')} style={{ color: (active === 'home') ? '#F87C58' : '#839585', borderBottom: (active === 'home') && '2px solid #F87C58' }} >Home</HashLink>
               <HashLink to="/#about" scroll={el => scrollWithOffset(el, 60)} smooth onClick={() => setActive('about')} style={{ color: (active === 'about') ? '#F87C58' : '#839585', borderBottom: (active === 'about') && '2px solid #F87C58' }}>About</HashLink>
               <HashLink to="/#skills" scroll={el => scrollWithOffset(el, 60)} smooth onClick={() => setActive('skills')} style={{ color: (active === 'skills') ? '#F87C58' : '#839585', borderBottom: (active === 'skills') && '2px solid #F87C58' }} >Skills</HashLink>
+              <HashLink to="/#experience" scroll={el => scrollWithOffset(el, 60)} smooth onClick={() => setActive('experience')} style={{ color: (active === 'experience') ? '#F87C58' : '#839585', borderBottom: (active === 'experience') && '2px solid #F87C58' }}>Experience</HashLink>
+              <HashLink to="/#professional-projects" scroll={el => scrollWithOffset(el, 60)} smooth onClick={() => setActive('professional-projects')} style={{ color: (active === 'professional-projects') ? '#F87C58' : '#839585', borderBottom: (active === 'professional-projects') && '2px solid #F87C58' }}>Prof. Projects</HashLink>
               <HashLink to="/#projects" scroll={el => scrollWithOffset(el, 60)} smooth onClick={() => setActive('projects')} style={{ color: (active === 'projects') ? '#F87C58' : '#839585', borderBottom: (active === 'projects') && '2px solid #F87C58' }}>Projects</HashLink>
               <HashLink to="/#contact" scroll={el => scrollWithOffset(el, 60)} smooth onClick={() => setActive('contact')} style={{ color: (active === 'contact') ? '#F87C58' : '#839585', borderBottom: (active === 'contact') && '2px solid #F87C58' }}>Contact</HashLink>
               {/* <Text as={'a'} bg={colors.primary} p={'0.3rem 1rem'} borderRadius={'4px'} fontSize={'1.1rem'}>
@@ -98,8 +100,8 @@ const Navbar = () => {
               </Button>
               {
                 isDark ?
-                  <Icon color={'yellow'} as={IoMdSunny} onClick={() => setIsDark(!isDark)} name='Light Mode' cursor={'pointer'} fontSize={'1.5rem'} /> :
-                  <Icon color={'#282828'} as={IoMdMoon} onClick={() => setIsDark(!isDark)} name='Dark Mode' cursor={'pointer'} fontSize={'1.5rem'} />
+                  <Icon color={'#FFD700'} as={IoMdSunny} onClick={() => setIsDark(!isDark)} name='Light Mode' cursor={'pointer'} fontSize={'1.5rem'} /> :
+                  <Icon color={colors.light.text} as={IoMdMoon} onClick={() => setIsDark(!isDark)} name='Dark Mode' cursor={'pointer'} fontSize={'1.5rem'} />
 
               }
 
@@ -116,8 +118,8 @@ const Navbar = () => {
 
           // ----------------width below 700px------------------
           <Box bg={isDark ? colors.dark.primary : colors.light.secondary} color={'white'} w={'100%'} p={'0rem 1rem'} h={'3.5rem'} position={'fixed'} top={0} zIndex={999} display={'flex'} alignItems={'center'} justifyContent={'space-between'}>
-            <Text fontSize={'1.5rem'} w={'9rem'}>
-              <HashLink to="/#home" smooth onClick={() => setActive('home')} style={{ display: 'flex', alignItems: 'center', color: isDark ? 'white' : '#434242' }}>
+            <Text fontSize={'1.3rem'} w={'9rem'}>
+              <HashLink to="/#home" smooth onClick={() => setActive('home')} style={{ display: 'flex', alignItems: 'center', color: isDark ? 'white' : '#282828' }}>
                 Yash<span style={{ color: 'grey' }}>Gupta</span>
                 <Icon as={SiLintcode} color={'red'} />
               </HashLink>
@@ -128,10 +130,10 @@ const Navbar = () => {
               {
                 isDark ?
                   <Icon color={'#FFD700'} as={IoMdSunny} onClick={() => setIsDark(!isDark)} name='Light Mode' cursor={'pointer'} fontSize={'1.5rem'} /> :
-                  <Icon color={'#282828'} as={IoMdMoon} onClick={() => setIsDark(!isDark)} name='Dark Mode' cursor={'pointer'} fontSize={'1.5rem'} />
+                  <Icon color={colors.light.text} as={IoMdMoon} onClick={() => setIsDark(!isDark)} name='Dark Mode' cursor={'pointer'} fontSize={'1.5rem'} />
 
               }
-              <Icon as={IoMenu} fontSize={'1.8rem'} ref={btnRef} colorScheme='teal' onClick={onOpen} color={'#434242'} />
+              <Icon as={IoMenu} fontSize={'1.8rem'} ref={btnRef} colorScheme='teal' onClick={onOpen} color={isDark ? colors.dark.text : colors.light.text} />
               {/* <Button ref={btnRef} colorScheme='teal' onClick={onOpen}>
           
         Open
@@ -144,13 +146,15 @@ const Navbar = () => {
 
               >
                 <DrawerOverlay />
-                <DrawerContent bg={isDark ? colors.dark.primary : colors.light.secondary} color={isDark ? 'white' : '#282828'} opacity={'94%'}>
+                <DrawerContent bg={isDark ? colors.dark.primary : colors.light.secondary} color={isDark ? colors.dark.text : colors.light.text} opacity={'94%'}>
                   <DrawerCloseButton fontSize={'1rem'} />
                   <DrawerBody >
                     <Box mt={'1rem'} display={'flex'} flexDirection={'column'} alignItems={'center'} h={'25rem'} fontSize={'1.3rem'} justifyContent={'center'}>
                       <HashLink to="/#home" smooth onClick={() => onClose()} style={{ padding: '0.7rem 0rem' }} >Home</HashLink>
                       <HashLink to="/#about" scroll={el => scrollWithOffset(el, 60)} smooth onClick={() => onClose()} style={{ padding: '0.7rem 0rem' }} >About</HashLink>
                       <HashLink to="/#skills" scroll={el => scrollWithOffset(el, 60)} smooth onClick={() => onClose()} style={{ padding: '0.7rem 0rem' }}  >Skills</HashLink>
+                      <HashLink to="/#experience" scroll={el => scrollWithOffset(el, 60)} smooth onClick={() => onClose()} style={{ padding: '0.7rem 0rem' }} >Experience</HashLink>
+                      <HashLink to="/#professional-projects" scroll={el => scrollWithOffset(el, 60)} smooth onClick={() => onClose()} style={{ padding: '0.7rem 0rem' }} >Prof. Projects</HashLink>
                       <HashLink to="/#projects" scroll={el => scrollWithOffset(el, 60)} smooth onClick={() => onClose()} style={{ padding: '0.7rem 0rem' }} >Projects</HashLink>
                       <HashLink to="/#contact" scroll={el => scrollWithOffset(el, 60)} smooth onClick={() => onClose()} style={{ padding: '0.7rem 0rem' }}>Contact</HashLink>
 

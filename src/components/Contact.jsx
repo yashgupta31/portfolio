@@ -73,8 +73,8 @@ const Contact = () => {
       const [isLargerThan500] = useMediaQuery("(min-width: 500px)")
 
     return (
-        <Box bg={isDark?'#282828': colors.light.third} minH={'91vh'} pt={'2rem'} pb={'5rem'} display={'flex'} flexDirection={'column'} alignItems={'center'}>
-            <Text fontSize={isLargerThan500? '2.6rem': '2.2rem'} color={isDark? 'white': '#434242'} fontWeight={'450'} >Let's <Text as={'span'} color={colors.primary}>Connect</Text></Text>
+        <Box bg={isDark ? colors.dark.third : colors.light.third} minH={'91vh'} pt={'2rem'} pb={'5rem'} display={'flex'} flexDirection={'column'} alignItems={'center'}>
+            <Text fontSize={isLargerThan500? '2.6rem': '2.2rem'} color={isDark ? colors.dark.text : colors.light.text} fontWeight={'450'} >Let's <Text as={'span'} color={colors.primary}>Connect</Text></Text>
             {/* <Text fontSize={isLargerThan500? '2.6rem': '2.2rem'} color={isDark? 'white': '#434242'} fontWeight={'450'} >My <Text as={'span'} color={colors.primary}>Projects</Text></Text> */}
 
             <Box  w={'90%'} display={'flex'} flexDirection={isLargerThan1100? 'row': 'column'} alignItems={'center'} justifyContent={'space-evenly'}>
@@ -83,22 +83,22 @@ const Contact = () => {
             <Box w={isLargerThan600?'35rem': '94%'} h={'21rem'} display={'flex'} flexDirection={'column'} justifyContent={'space-evenly'}>
                
                 <Box h={'15rem'} w={'45%'} display={'flex'} flexDirection={'column'} justifyContent={'space-between'}>
-                <Button data-aos='fade-right'  bg={isDark?colors.dark.primary: '#929292'} color={isDark?'white':'#282828'} transition={'0.4s'} _hover={{bg: '#F87C58'}} onClick={() => window.open('https://www.linkedin.com/in/yash-gupta-196758281/', '_blank')}>Linkdin</Button>
-                <Button data-aos='fade-right'  bg={isDark?colors.dark.primary: '#929292'} color={isDark?'white':'#282828'} transition={'0.4s'} _hover={{bg: '#F87C58'}}  onClick={()=> setShowGmailForm(true)}>Mail</Button>
-                <Button data-aos='fade-right'  bg={isDark?colors.dark.primary: '#929292'} color={isDark?'white':'#282828'} transition={'0.4s'} _hover={{bg: '#F87C58'}}  onClick={()=> window.open('https://github.com/yashgupta31', '_blank')}>Github</Button>
-                <Button data-aos='fade-right'  bg={isDark?colors.dark.primary: '#929292'} color={isDark?'white':'#282828'} transition={'0.4s'} _hover={{bg: '#F87C58'}}  onClick={handleWhatsapp}>Whatsapp</Button>
-                <Button data-aos='fade-right'  as={'a'} onClick={downloadResume} bg={isDark?colors.dark.primary: '#929292'} color={isDark?'white':'#282828'} transition={'0.4s'} _hover={{bg: '#F87C58'}} >Resume</Button>
+                <Button data-aos='fade-right'  bg={isDark?colors.dark.fourth: '#929292'} color={isDark ? colors.dark.text : colors.light.text} transition={'0.4s'} _hover={{bg: '#F87C58'}} onClick={() => window.open('https://www.linkedin.com/in/yash-gupta-196758281/', '_blank')}>Linkdin</Button>
+                <Button data-aos='fade-right'  bg={isDark?colors.dark.fourth: '#929292'} color={isDark ? colors.dark.text : colors.light.text} transition={'0.4s'} _hover={{bg: '#F87C58'}}  onClick={()=> setShowGmailForm(true)}>Mail</Button>
+                <Button data-aos='fade-right'  bg={isDark?colors.dark.fourth: '#929292'} color={isDark ? colors.dark.text : colors.light.text} transition={'0.4s'} _hover={{bg: '#F87C58'}}  onClick={()=> window.open('https://github.com/yashgupta31', '_blank')}>Github</Button>
+                <Button data-aos='fade-right'  bg={isDark?colors.dark.fourth: '#929292'} color={isDark ? colors.dark.text : colors.light.text} transition={'0.4s'} _hover={{bg: '#F87C58'}}  onClick={handleWhatsapp}>Whatsapp</Button>
+                <Button data-aos='fade-right'  as={'a'} onClick={downloadResume} bg={isDark?colors.dark.fourth: '#929292'} color={isDark ? colors.dark.text : colors.light.text} transition={'0.4s'} _hover={{bg: '#F87C58'}} >Resume</Button>
                 </Box>
 
 
                 <Box display={'flex'} flexDirection={isLargerThan600?'row': 'column'} w={isLargerThan600?'36rem': '100%'} h={!isLargerThan600 && '7rem'} mt={'1rem'} justifyContent={'space-between'}>
                 <Box  color={'white'} border={'1px solid #F87C58'} borderRadius={'8px'} display={'flex'} justifyContent={'space-between'} alignItems={'center'}>
-                    <Text color={isDark? 'white': '#434242'} ml={isLargerThan600? '1rem': '0.2rem'} mr={isLargerThan600? '1rem': '0.2rem'} fontSize={!isLargerThan600 && 'sm'}>9527267375 </Text>
+                    <Text color={isDark ? colors.dark.text : colors.light.text} ml={isLargerThan600? '1rem': '0.2rem'} mr={isLargerThan600? '1rem': '0.2rem'} fontSize={!isLargerThan600 && 'sm'}>9527267375 </Text>
                     <Button bg={'#F87C58'} onClick={handleCopyNumber}>{isNumCopy? 'Copied': 'Copy'}</Button>
                 </Box>
 
                 <Box color={'white'} fontSize={!isLargerThan600 && 'sm'} border={'1px solid #F87C58'} borderRadius={'8px'} display={'flex'} justifyContent={'space-between'} alignItems={'center'}>
-                    <Text color={isDark? 'white': '#434242'} ml={isLargerThan600? '1rem': '0.2rem'} mr={isLargerThan600? '1rem': '0.2rem'} fontSize={!isLargerThan600 && 'sm'} >yashsantoshgupta2019@gmail.com</Text>
+                    <Text color={isDark ? colors.dark.text : colors.light.text} ml={isLargerThan600? '1rem': '0.2rem'} mr={isLargerThan600? '1rem': '0.2rem'} fontSize={!isLargerThan600 && 'sm'} >yashsantoshgupta2019@gmail.com</Text>
                     <Button bg={'#F87C58'} onClick={handleCopyMail} _active={{ bg: "#F87C58" }}>{isMailCopy? 'Copied': 'Copy'}</Button>
                 </Box>
                 </Box>
@@ -106,7 +106,7 @@ const Contact = () => {
             </Box>
             
             </Box>
-            <Text color={isDark?'lightgrey':'#282828'} position={'absolute'} bottom={'1rem'} fontSize={'0.8rem'} textAlign={'center'}>Developed and designed by Yash Gupta | Thanks For Visit</Text>
+            <Text color={isDark ? colors.dark.subText : colors.light.subText} position={'absolute'} bottom={'1rem'} fontSize={'0.8rem'} textAlign={'center'}>Developed and designed by Yash Gupta | Thanks For Visit</Text>
 
             {
                 showGmailForm && (<GmailForm setShowGmailForm={setShowGmailForm} />)

@@ -109,14 +109,14 @@ const Projects = () => {
         <Box bg={isDark?colors.dark.primary: colors.light.primary} minH={'100vh'} pb={'7rem'} pt={'2rem'} display={'flex'} flexDirection={'column'} alignItems={'center'} >
             {/* <Heading color={'white'} textAlign={'center'} w={'70%'} mb={'1.5rem'} >My Projects</Heading> */}
             
-            <Text fontSize={isLargerThan500? '2.6rem': '2.2rem'} color={isDark? 'white': '#434242'} fontWeight={'450'} >My <Text as={'span'} color={colors.primary}>Projects</Text></Text>
+            <Text fontSize={isLargerThan500? '2.6rem': '2.2rem'} color={isDark ? colors.dark.text : colors.light.text} fontWeight={'450'} >My <Text as={'span'} color={colors.primary}>Projects</Text></Text>
 
             <Box w={'90%'}  display={'flex'}  mt={'1rem'} flexWrap={'wrap'} justifyContent={'center'}>
             {/* <Box bg={'red'} display={'flex'} overflowX={'auto'} h={'40rem'} transition={'2s'}> */}
                 {/* each project----------------- */}
                 {
                     data.map((elem, index) => (
-                        <Box key={index} data-aos="fade-up" bg={isDark? '#181818': '#B6B6B6'} transition={'0.5s'} color={isDark?'white': '#282828'} w={'26rem'} h={isLargerThan400?'35rem':'auto'} m={'1rem'} pb={'1rem'} borderRadius={'14px'} boxShadow={isDark?'rgba(0, 0, 0, 0.35) 0px 5px 15px':'rgba(0, 0, 0, 0.35) 0px 2px 10px'}>
+                        <Box key={index} data-aos="fade-up" bg={isDark ? colors.dark.fourth : colors.light.fourth} transition={'0.5s'} color={isDark ? colors.dark.text : colors.light.text} w={'26rem'} h={isLargerThan400?'35rem':'auto'} m={'1rem'} pb={'1rem'} borderRadius={'14px'} boxShadow={isDark?'rgba(0, 0, 0, 0.35) 0px 5px 15px':'rgba(0, 0, 0, 0.35) 0px 2px 10px'}>
                             <Box bg={'black'} h={isLargerThan400?'13rem': '9rem'} w={'100%'} overflow={'hidden'} borderRadius={'14px 14px 0px 0px'} >
                                 <Image src={elem.img[count]}  h={'100%'}  />
                             </Box>

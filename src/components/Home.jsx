@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
-import dp from '../assets/dp4.png'
+import dp from '../assets/dp6.jpg'
 import { Box, Heading, Text, Button, useMediaQuery, keyframes, space, Image, Link, Icon } from '@chakra-ui/react';
 
 import { CiLinkedin } from "react-icons/ci";
@@ -187,14 +187,14 @@ document.body.removeChild(link);
 
   return (
     <Box h={'100vh'} pt={isLargerThan700?'0rem':'9rem'} bg={isDark? colors.dark.primary: colors.light.primary} display={'flex'} flexDirection={isLargerThan1000 ? 'row' : 'column'} justifyContent={'center'} alignItems={'center'} position={'relative'}>
-      <Box position={'absolute'} color={isDark?'white': colors.dark.primary} left={isLargerThan700 && '4rem'} right={!isLargerThan700 && '1rem'} bottom={isLargerThan700?'3rem': '1rem'} display={'flex'} flexDirection={'column'} h={isLargerThan700?'7rem': '5.5rem'} justifyContent={'space-between'} alignItems={'center'} fontSize={isLargerThan700?'1.9rem': '1.3rem'} opacity={flag3 ? '100%' : '0%'} transition={'0.7s'}>
+      <Box position={'absolute'} color={isDark ? colors.dark.text : colors.light.text} left={isLargerThan700 && '4rem'} right={!isLargerThan700 && '1rem'} bottom={isLargerThan700?'3rem': '1rem'} display={'flex'} flexDirection={'column'} h={isLargerThan700?'7rem': '5.5rem'} justifyContent={'space-between'} alignItems={'center'} fontSize={isLargerThan700?'1.9rem': '1.3rem'} opacity={flag3 ? '100%' : '0%'} transition={'0.7s'}>
         <Text as={'a'} href='https://www.linkedin.com/in/yashgupta2001/' target='_blank'><Icon as={CiLinkedin}  style={{ transform: flag3 ? 'none' : 'Rotate(-135deg)', transition: '0.7s' }} /></Text>
         <Text as={'a'} href='https://github.com/yashgupta31' target='_blank'><Icon as={FaGithub} style={{ transform: flag3 ? 'none' : 'Rotate(135deg)', transition: '0.7s' }} /></Text>
         <Text as={'a'} cursor={'pointer'}><Icon as={CgMail} onClick={()=> setShowGmailForm(true)} style={{ transform: flag3 ? 'none' : 'Rotate(135deg)', transition: '0.7s' }} /></Text>
 
       </Box>
       {
-        isLargerThan1000 ? (<><Box h={'13rem'} color={isDark?'white': colors.dark.primary} w={'33rem'} mr={'7rem'} display={'flex'} position={'relative'} flexDirection={'column'} justifyContent={'space-between'} alignItems={'start'}>
+        isLargerThan1000 ? (<><Box h={'13rem'} color={isDark ? colors.dark.text : colors.light.text} w={'33rem'} mr={'7rem'} display={'flex'} position={'relative'} flexDirection={'column'} justifyContent={'space-between'} alignItems={'start'}>
           <Heading as='h4' size='md' position={'relative'} opacity={flag1 ? '100%' : '0%'} left={flag1 ? '0rem' : '-5rem'} transition={'0.7s'}>Hello, my name is </Heading>
           <Heading as='h2' size='2xl' position={'relative'} opacity={flag2 ? '100%' : '0%'} left={flag2 ? '0rem' : '-5rem'} transition={'0.7s'} >Yash Gupta</Heading>
           <Text as={'span'} fontSize={'2rem'} position={'relative'} opacity={flag3 ? '100%' : '0%'} left={flag3 ? '0rem' : '-5rem'} transition={'0.7s'}>{`I'm a `} 
@@ -232,13 +232,13 @@ document.body.removeChild(link);
 </Button>
 
 {/* <Box display={'flex'} flexDirection={isLargerThan600?'row': 'column'} w={isLargerThan600?'36rem': '100%'} h={!isLargerThan600 && '7rem'} mt={'1rem'} justifyContent={'space-between'}>
-                <Box  color={'white'} border={'1px solid #F87C58'} borderRadius={'8px'} display={'flex'} justifyContent={'space-between'} alignItems={'center'}>
-                    <Text color={isDark? 'white': '#434242'} ml={isLargerThan600? '1rem': '0.2rem'} mr={isLargerThan600? '1rem': '0.2rem'} fontSize={!isLargerThan600 && 'sm'}>9527267375 </Text>
+                <Box  color={isDark ? colors.dark.text : colors.light.text} border={'1px solid #F87C58'} borderRadius={'8px'} display={'flex'} justifyContent={'space-between'} alignItems={'center'}>
+                    <Text color={isDark ? colors.dark.text : colors.light.text} ml={isLargerThan600? '1rem': '0.2rem'} mr={isLargerThan600? '1rem': '0.2rem'} fontSize={!isLargerThan600 && 'sm'}>9527267375 </Text>
                     <Button bg={'#F87C58'} onClick={handleCopyNumber}>{isNumCopy? 'Copied': 'Copy'}</Button>
                 </Box>
 
-                <Box color={'white'} fontSize={!isLargerThan600 && 'sm'} border={'1px solid #F87C58'} borderRadius={'8px'} display={'flex'} justifyContent={'space-between'} alignItems={'center'}>
-                    <Text color={isDark? 'white': '#434242'} ml={isLargerThan600? '1rem': '0.2rem'} mr={isLargerThan600? '1rem': '0.2rem'} fontSize={!isLargerThan600 && 'sm'} >yashsantoshgupta2019@gmail.com</Text>
+                <Box color={isDark ? colors.dark.text : colors.light.text} fontSize={!isLargerThan600 && 'sm'} border={'1px solid #F87C58'} borderRadius={'8px'} display={'flex'} justifyContent={'space-between'} alignItems={'center'}>
+                    <Text color={isDark ? colors.dark.text : colors.light.text} ml={isLargerThan600? '1rem': '0.2rem'} mr={isLargerThan600? '1rem': '0.2rem'} fontSize={!isLargerThan600 && 'sm'} >yashsantoshgupta2019@gmail.com</Text>
                     <Button bg={'#F87C58'} onClick={handleCopyMail} _active={{ bg: "#F87C58" }}>{isMailCopy? 'Copied': 'Copy'}</Button>
                 </Box>
                 </Box> */}
@@ -246,20 +246,20 @@ document.body.removeChild(link);
         </Box>
       
 
-          <Box position="relative" bg={'#F87C58'} mr={'4rem'} display={'flex'} alignItems={'center'} justifyContent={'center'} borderRadius={'50%'}  h={'21rem'} w={'21rem'} boxShadow={'xl'}>
+          <Box position="relative" opacity={flag1 ? '100%' : '0%'} transition={'0.7s'} bg={'#F87C58'} mr={'4rem'} display={'flex'} alignItems={'center'} justifyContent={'center'} borderRadius={'50%'}  h={'21rem'} w={'21rem'} boxShadow={'xl'}>
       
         <Box bg={'#F87C58'} position={'absolute'} w={'103%'} h={'100%'} transition={'1.5s'} borderRadius={'100%'} transform={flag6?'rotate(0deg)': 'rotate(400deg)'} ></Box>
             <img src={dp} alt="" style={{ height: '100%', width: '100%', filter: 'grayscale(40%)', borderRadius: '50%' }} />
           </Box></>) : 
           // -----------less than 1000px----------
           (<Box display={'flex'}  flexDirection={'column'} alignItems={'center'}>
-            <Box position="relative" h={isLargerThan360?'14rem': '11rem'} backgroundColor={'red'} w={isLargerThan360?'14rem': '11rem'} mt={isLargerThan700? '0rem': '-8rem'} bg={'#F87C58'} borderRadius={'50%'}  display={'flex'} alignItems={'center'} justifyContent={'center'}>
+            <Box position="relative" opacity={flag1 ? '100%' : '0%'} transition={'0.7s'} h={isLargerThan360?'14rem': '11rem'} backgroundColor={'red'} w={isLargerThan360?'14rem': '11rem'} mt={isLargerThan700? '0rem': '-8rem'} bg={'#F87C58'} borderRadius={'50%'}  display={'flex'} alignItems={'center'} justifyContent={'center'}>
             <Box bg={'#F87C58'} zIndex={1}  position='absolute' w={'103%'} h={'100%'} transition={'1.5s'} borderRadius={'50%'}  transform={flag6?'rotate(0deg)': 'rotate(500deg)'}></Box>
 
             <Image src={dp} zIndex={2} alt='profile-pic' h={'100%'} w={'100%'}  borderRadius={'50%'}  />
           </Box>
 
-            <Box h={isLargerThan700? '13rem': isLargerThan450?'12rem': '12rem'} w={isLargerThan500 ? '30rem': isLargerThan450? '25rem': '16.7rem'} m={'1rem'} fontSize={'0.2rem'} mt={'1rem'}  color={isDark?'white': colors.dark.primary} display={'flex'} position={'relative'} flexDirection={'column'} justifyContent={'space-between'} alignItems={'center'}>
+            <Box h={isLargerThan700? '13rem': isLargerThan450?'12rem': '12rem'} w={isLargerThan500 ? '30rem': isLargerThan450? '25rem': '16.7rem'} m={'1rem'} fontSize={'0.2rem'} mt={'1rem'}  color={isDark ? colors.dark.text : colors.light.text} display={'flex'} position={'relative'} flexDirection={'column'} justifyContent={'space-between'} alignItems={'center'}>
               <Heading as='h4' size='md' position={'relative'} opacity={flag1 ? '100%' : '0%'} left={flag1 ? '0rem' : '-5rem'} transition={'0.7s'} >Hello, my name is </Heading>
               <Heading as='h3' size='2xl' position={'relative'} opacity={flag2 ? '100%' : '0%'} left={flag2 ? '0rem' : '-5rem'} transition={'0.7s'} >Yash Gupta</Heading>
               <Heading as='h3' mr={'auto'} ml={'2rem'} fontSize={isLargerThan500? '1.7rem': '1.3rem'} size='lg' position={'relative'} opacity={flag3 ? '100%' : '0%'} left={flag3 ? '0rem' : '-5rem'} transition={'0.7s'}>{`I'm a `} 
@@ -283,7 +283,7 @@ document.body.removeChild(link);
       }
 
       {
-        isLargerThan700 && <FaArrowDown style={{ position: 'absolute', color: isDark? 'white': colors.dark.primary, right: '8rem', bottom: flag5 ? '5rem' : '3rem', transition: '1s', fontSize: '1.6rem' }} />
+        isLargerThan700 && <FaArrowDown style={{ position: 'absolute', color: isDark ? colors.dark.text : colors.light.text, right: '8rem', bottom: flag5 ? '5rem' : '3rem', transition: '1s', fontSize: '1.6rem' }} />
       }
 
       {/* --------gmail----------- */}
