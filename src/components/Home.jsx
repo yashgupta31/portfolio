@@ -110,10 +110,10 @@ const Home = () => {
 
   const handleResumeDownload = () => {
     // Create an anchor element
-    const url = '/resume.pdf';
+    const url = '/Yash_Gupta_Resume.pdf';
 const link = document.createElement('a');
 link.href = url;
-link.download = 'resume.pdf';
+link.download = 'Yash_Gupta_Resume.pdf';
 document.body.appendChild(link);
 link.click();
 document.body.removeChild(link);
@@ -164,12 +164,12 @@ document.body.removeChild(link);
   // -----------------Resume Download & open in new tab---------------------
   const downloadResume = () => {
     // Open in a new tab
-    window.open('/resume.pdf', '_blank');
+    window.open('/Yash_Gupta_Resume.pdf', '_blank');
     // Trigger download
     setTimeout(() => {
       const link = document.createElement('a');
-      link.href = '/resume.pdf';
-      link.download = 'resume.pdf';
+      link.href = '/Yash_Gupta_Resume.pdf';
+      link.download = 'Yash_Gupta_Resume.pdf';
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
