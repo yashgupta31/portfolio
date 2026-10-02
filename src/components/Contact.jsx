@@ -101,7 +101,7 @@ const Contact = () => {
                     <Text color={isDark ? colors.dark.text : colors.light.text} ml={isLargerThan600? '1rem': '0.2rem'} mr={isLargerThan600? '1rem': '0.2rem'} fontSize={!isLargerThan600 && 'sm'} >yashsantoshgupta2019@gmail.com</Text>
                     <Button bg={'#F87C58'} onClick={handleCopyMail} _active={{ bg: "#F87C58" }}>{isMailCopy? 'Copied': 'Copy'}</Button>
                 </Box>
-                </Box>
+                </Box> 
                 
             </Box>
             
