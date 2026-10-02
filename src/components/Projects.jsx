@@ -116,7 +116,7 @@ const Projects = () => {
                 {/* each project----------------- */}
                 {
                     data.map((elem, index) => (
-                        <Box key={index} data-aos="fade-up" bg={isDark ? colors.dark.fourth : colors.light.fourth} transition={'0.5s'} color={isDark ? colors.dark.text : colors.light.text} w={'26rem'} h={isLargerThan400?'35rem':'auto'} m={'1rem'} pb={'1rem'} borderRadius={'14px'} boxShadow={isDark?'rgba(0, 0, 0, 0.35) 0px 5px 15px':'rgba(0, 0, 0, 0.35) 0px 2px 10px'}>
+                        <Box key={index} data-aos="fade-up" bg={isDark ? colors.dark.fourth : colors.light.fourth} transition={'0.5s'} color={isDark ? colors.dark.text : colors.light.text} w={isLargerThan500 ? '26rem' : '100%'} h={isLargerThan400?'35rem':'auto'} m={'1rem'} pb={'1rem'} borderRadius={'14px'} boxShadow={isDark?'rgba(0, 0, 0, 0.35) 0px 5px 15px':'rgba(0, 0, 0, 0.35) 0px 2px 10px'}>
                             <Box bg={'black'} h={isLargerThan400?'13rem': '9rem'} w={'100%'} overflow={'hidden'} borderRadius={'14px 14px 0px 0px'} >
                                 <Image src={elem.img[count]}  h={'100%'}  />
                             </Box>

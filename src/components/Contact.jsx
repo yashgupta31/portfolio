@@ -78,11 +78,11 @@ const Contact = () => {
             {/* <Text fontSize={isLargerThan500? '2.6rem': '2.2rem'} color={isDark? 'white': '#434242'} fontWeight={'450'} >My <Text as={'span'} color={colors.primary}>Projects</Text></Text> */}
 
             <Box  w={'90%'} display={'flex'} flexDirection={isLargerThan1100? 'row': 'column'} alignItems={'center'} justifyContent={'space-evenly'}>
-            <Image w={'25rem'} src='https://static.vecteezy.com/system/resources/previews/011/381/958/original/business-people-shaking-hands-finishing-up-a-meeting-3d-character-illustration-png.png' />
+            <Image w={isLargerThan500 ? '25rem' : '100%'} src='https://static.vecteezy.com/system/resources/previews/011/381/958/original/business-people-shaking-hands-finishing-up-a-meeting-3d-character-illustration-png.png' />
            
-            <Box w={isLargerThan600?'35rem': '94%'} h={'21rem'} display={'flex'} flexDirection={'column'} justifyContent={'space-evenly'}>
+            <Box w={isLargerThan600?'35rem': '100%'} h={'auto'} display={'flex'} flexDirection={'column'} justifyContent={'space-evenly'}>
                
-                <Box h={'15rem'} w={'45%'} display={'flex'} flexDirection={'column'} justifyContent={'space-between'}>
+                <Box h={'15rem'} w={isLargerThan500 ? '45%' : '100%'} display={'flex'} flexDirection={'column'} justifyContent={'space-between'}>
                 <Button data-aos='fade-right'  bg={isDark?colors.dark.fourth: '#929292'} color={isDark ? colors.dark.text : colors.light.text} transition={'0.4s'} _hover={{bg: '#F87C58'}} onClick={() => window.open('https://www.linkedin.com/in/yash-gupta-196758281/', '_blank')}>Linkdin</Button>
                 <Button data-aos='fade-right'  bg={isDark?colors.dark.fourth: '#929292'} color={isDark ? colors.dark.text : colors.light.text} transition={'0.4s'} _hover={{bg: '#F87C58'}}  onClick={()=> setShowGmailForm(true)}>Mail</Button>
                 <Button data-aos='fade-right'  bg={isDark?colors.dark.fourth: '#929292'} color={isDark ? colors.dark.text : colors.light.text} transition={'0.4s'} _hover={{bg: '#F87C58'}}  onClick={()=> window.open('https://github.com/yashgupta31', '_blank')}>Github</Button>
